@@ -11,7 +11,7 @@ function shipCells(start: number, length: number, horizontal: boolean): number[]
 function fitsOnBoard(start: number, length: number, horizontal: boolean): boolean {
   if (horizontal) {
     const lastCol = colOf(start) + length - 1;
-    return lastCol <= BOARD_SIZE;
+    return lastCol < BOARD_SIZE;
   }
   return start + (length - 1) * BOARD_SIZE < CELL_COUNT;
 }
